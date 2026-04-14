@@ -1,0 +1,267 @@
+// Shared Nav & Footer components injected into every page
+// Usage: add <script src="../components.js"></script> and
+// <div id="nav-placeholder"></div> / <div id="footer-placeholder"></div>
+
+(function () {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+  const pages = [
+    { href: 'index.html', label: 'Home' },
+    { href: 'services.html', label: 'Services' },
+    { href: 'about.html', label: 'About' },
+    { href: 'faq.html', label: 'FAQ' },
+    { href: 'blog.html', label: 'Blog' },
+    { href: 'pricing.html', label: 'Pricing' },
+  ];
+
+  const navLinks = pages.map(p => {
+    const active = currentPage === p.href ? ' class="active"' : '';
+    return `<a href="${p.href}"${active}>${p.label}</a>`;
+  }).join('');
+
+  const mobileLinks = pages.map(p => {
+    const active = currentPage === p.href ? ' class="active"' : '';
+    return `<a href="${p.href}"${active}>${p.label}</a>`;
+  }).join('');
+
+  const navHTML = `
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark">
+        <img src="credtent-logo-mark.svg" alt="" width="32" height="37">
+      </div>
+      <div class="nav-wordmark">
+        <img src="credtent-wordmark.svg" alt="Credtent" width="130" height="25">
+      </div>
+    </a>
+    <div class="nav-links">${navLinks}</div>
+    <div class="nav-auth">
+      <a href="#" class="signin">Sign In</a>
+      <a href="#" class="signup">Sign Up Free</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger-btn" aria-label="Open menu" aria-expanded="false">
+      <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0"  width="21" height="2" rx="1" fill="currentColor"/>
+        <rect x="0" y="7"  width="21" height="2" rx="1" fill="currentColor"/>
+        <rect x="0" y="14" width="21" height="2" rx="1" fill="currentColor"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile-menu" id="nav-mobile-menu" aria-hidden="true">
+  <div class="nav-mobile-links">${mobileLinks}</div>
+  <div class="nav-mobile-divider"></div>
+  <div class="nav-mobile-auth">
+    <a href="#" class="signin">Sign In</a>
+    <a href="#" class="signup">Sign Up Free</a>
+  </div>
+</div>`;
+
+  const footerHTML = `
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="footer-logo-mark">
+          <img src="credtent-logo-mark.svg" alt="" width="32" height="37">
+        </div>
+        <div class="footer-wordmark">
+          <img src="credtent-wordmark.svg" alt="Credtent" width="130" height="25">
+        </div>
+      </div>
+      <p>A neutral, third-party utility uniting creatives and AI for mutual prosperity. Delaware Public Benefit Corporation.</p>
+      <div class="footer-social">
+        <a href="#" title="Bluesky">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+        </a>
+        <a href="#" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="#" title="X / Twitter">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" title="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="services.html#licensing">Licensing-as-a-Service</a></li>
+        <li><a href="services.html#research">Research-as-a-Service</a></li>
+        <li><a href="services.html#compliance">Compliance-as-a-Service</a></li>
+        <li><a href="services.html#enterprise">Enterprise Solutions</a></li>
+        <li><a href="badges.html">Creative Origin Badges</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Partnerships</h5>
+      <ul>
+        <li><a href="lws.html">London Writers' Salon</a></li>
+        <li><a href="#">Writers Guild of America</a></li>
+        <li><a href="#">Sign Up Free</a></li>
+        <li><a href="#">Sign In</a></li>
+        <li><a href="about.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-newsletter">
+      <h5>Stay Connected</h5>
+      <p>Get insights on creative protection and licensing.</p>
+      <form class="footer-newsletter-form" onsubmit="return false">
+        <input type="email" placeholder="Your email address" />
+        <button type="submit">→</button>
+      </form>
+      <div class="footer-cert" style="margin-top:24px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+        B-Corp Certified
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copyright">© 2026 Credtent Inc. All rights reserved.</span>
+    <div class="footer-legal">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+    </div>
+  </div>
+</footer>`;
+
+  function inject(id, html) {
+    const el = document.getElementById(id);
+    if (el) el.outerHTML = html;
+  }
+
+  // ── Hero gradient injection ──────────────────────────────────
+  // Each pair defines opposite starting corners for purple + orange.
+  // Positions are expressed as CSS top/right/bottom/left values.
+  const GRAD_PAIRS = [
+    { p: { top: '-160px', right: '-110px' }, o: { bottom: '-100px', left:  '-80px'  } }, // TR / BL
+    { p: { top: '-140px', left:  '-100px' }, o: { bottom:  '-80px', right: '-60px'  } }, // TL / BR
+    { p: { bottom:'-110px', right:'-90px' }, o: { top:    '-120px', left:  '-75px'  } }, // BR / TL
+    { p: { bottom:'-100px', left: '-110px'}, o: { top:    '-100px', right: '-70px'  } }, // BL / TR
+    { p: { top:  '-130px', right:  '28%'  }, o: { bottom:  '-90px', left:   '22%'  } }, // top-centre / bottom-centre
+    { p: { top:   '15%',   right: '-120px'}, o: { top:     '20%',   left:  '-90px' } }, // mid-right / mid-left
+    { p: { top:  '-120px', left:   '35%'  }, o: { bottom:  '-75px', right:  '30%'  } }, // top-centre-left / bottom-centre-right
+    { p: { bottom: '-90px', right: '40%'  }, o: { top:    '-110px', left:   '35%'  } }, // bottom-centre / top-centre
+  ];
+
+  function applyHeroGradients() {
+    document.querySelectorAll('.hero-dark, .page-hero').forEach(function (hero) {
+      const pair = GRAD_PAIRS[Math.floor(Math.random() * GRAD_PAIRS.length)];
+
+      // Randomise animation duration slightly so every hero feels unique
+      const pDur = (18 + Math.random() * 8).toFixed(1) + 's';
+      const oDur = (22 + Math.random() * 9).toFixed(1) + 's';
+      const pDel = (Math.random() * 4).toFixed(1) + 's';
+      const oDel = (Math.random() * 6).toFixed(1) + 's';
+
+      function makeGrad(type, pos, dur, delay) {
+        const el = document.createElement('div');
+        el.className = 'hero-grad hero-grad-' + type;
+        Object.assign(el.style, {
+          top:    pos.top    || 'auto',
+          right:  pos.right  || 'auto',
+          bottom: pos.bottom || 'auto',
+          left:   pos.left   || 'auto',
+          animation: 'drift-' + type + ' ' + dur + ' ease-in-out ' + delay + ' infinite',
+        });
+        return el;
+      }
+
+      hero.appendChild(makeGrad('purple', pair.p, pDur, pDel));
+      hero.appendChild(makeGrad('orange', pair.o, oDur, oDel));
+    });
+  }
+
+  function inject(id, html) {
+    const el = document.getElementById(id);
+    if (el) el.outerHTML = html;
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    inject('nav-placeholder', navHTML);
+    inject('footer-placeholder', footerHTML);
+    applyHeroGradients();
+
+    // Hide-on-scroll-down / reveal-on-scroll-up (mobile only)
+    (function () {
+      var lastY   = window.scrollY;
+      var ticking = false;
+
+      function update() {
+        var nav  = document.querySelector('.nav');
+        var menu = document.getElementById('nav-mobile-menu');
+        var btn  = document.getElementById('nav-hamburger-btn');
+        if (!nav) { ticking = false; return; }
+
+        var currentY = window.scrollY;
+
+        // Only apply on mobile
+        if (window.innerWidth > 640) {
+          nav.classList.remove('nav--hidden');
+          ticking = false;
+          return;
+        }
+
+        if (currentY > lastY && currentY > 60) {
+          // Scrolling down — hide nav and close any open menu
+          nav.classList.add('nav--hidden');
+          if (menu) { menu.classList.remove('open'); menu.setAttribute('aria-hidden', 'true'); }
+          if (btn)  { btn.setAttribute('aria-expanded', 'false'); }
+        } else if (currentY < lastY) {
+          // Scrolling up — reveal nav
+          nav.classList.remove('nav--hidden');
+        }
+
+        lastY   = currentY;
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function () {
+        if (!ticking) { requestAnimationFrame(update); ticking = true; }
+      }, { passive: true });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 640) {
+          var nav = document.querySelector('.nav');
+          if (nav) nav.classList.remove('nav--hidden');
+        }
+      }, { passive: true });
+    }());
+
+    // Mobile hamburger toggle
+    const hamburgerBtn = document.getElementById('nav-hamburger-btn');
+    const mobileMenu   = document.getElementById('nav-mobile-menu');
+    if (hamburgerBtn && mobileMenu) {
+      hamburgerBtn.addEventListener('click', function () {
+        const isOpen = mobileMenu.classList.toggle('open');
+        hamburgerBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenu.setAttribute('aria-hidden', !isOpen);
+      });
+      // Close menu on link click
+      mobileMenu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          mobileMenu.classList.remove('open');
+          hamburgerBtn.setAttribute('aria-expanded', 'false');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+        });
+      });
+    }
+  });
+})();

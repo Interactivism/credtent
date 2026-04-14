@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — Credtent</title>
+  <meta name="description" content="Simple, transparent pricing. Choose the plan that fits your needs. Protect, license, and monetize your creative work." />
+  <link rel="stylesheet" href="styles.css" />
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<!-- ══ PAGE HERO ══════════════════════════════════════════════ -->
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="eyebrow">Plans &amp; Pricing</div>
+    <h1>Simple, Transparent Pricing</h1>
+    <p>Choose the plan that fits your needs. Protect, license, and monetize your creative work — starting free, forever.</p>
+  </div>
+</section>
+
+<!-- ══ PRICING PLANS ══════════════════════════════════════════ -->
+<section class="section-pad" style="background:#fff">
+  <div class="container">
+
+    <!-- Tabs -->
+    <div class="pricing-tabs">
+      <button class="pricing-tab active" onclick="switchTab(this,'creators')">For Creators</button>
+      <button class="pricing-tab" onclick="switchTab(this,'rights')">For Rights Holders</button>
+    </div>
+
+    <!-- Creators Tab -->
+    <div id="tab-creators" class="pricing-grid">
+
+      <!-- Free -->
+      <div class="pricing-card">
+        <h3>Free Opt-Out</h3>
+        <div style="font-size:13px;color:var(--c-muted);margin-top:4px">For every creator</div>
+        <div class="price">
+          <span class="price-amount">$0</span>
+          <span class="price-period">/ forever</span>
+        </div>
+        <p class="pricing-desc">The basic right to say no — available to every creator, always free.</p>
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Opt-out your specific name and creative works
+          </div>
+          <div class="pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Include your website or specific pages
+          </div>
+          <div class="pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Submissions tracked for compliance &amp; posterity
+          </div>
+        </div>
+        <a href="#" class="btn btn-outline-navy" style="width:100%;justify-content:center">Get Started</a>
+      </div>
+
+      <!-- Licensing -->
+      <div class="pricing-card popular">
+        <div class="popular-badge">Most Popular</div>
+        <h3>Licensing</h3>
+        <div style="font-size:13px;color:var(--c-muted);margin-top:4px">For active creators</div>
+        <div class="price">
+          <span class="price-amount">$49</span>
+          <span class="price-period">/ year</span>
+        </div>
+        <p class="pricing-desc">Start earning from AI usage while maintaining selective control over your work.</p>
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Opt-out for non-licensed LLMs &amp; AI tools
+          </div>
+          <div class="pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Opt-out auditing &amp; detailed reporting
+          </div>
+          <div class="pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Personal Creative Library
+          </div>
+          <div class="pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            AI Content Request Marketplace access
+          </div>
+          <div class="pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Submissions tracked for compliance
+          </div>
+        </div>
+        <a href="#" class="btn btn-orange" style="width:100%;justify-content:center">Get Started</a>
+      </div>
+
+      <!-- Premium Licensing -->
+      <div class="pricing-card">
+        <h3>Premium Licensing</h3>
+        <div style="font-size:13px;color:var(--c-muted);margin-top:4px">For power creators</div>
+        <div class="price">
+          <span class="price-amount">$99</span>
+          <span class="price-period">/ year</span>
+        </div>
+        <p class="pricing-desc">Full control over your licensing terms with science-backed content valuation.</p>
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            All Licensing plan benefits
+          </div>
+          <div class="pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Pricing Valuation report
+          </div>
+          <div class="pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Set your own pricing
+          </div>
+          <div class="pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Control your licensing terms
+          </div>
+          <div class="pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            License approval review
+          </div>
+        </div>
+        <a href="#" class="btn btn-outline-navy" style="width:100%;justify-content:center">Get Started</a>
+      </div>
+
+      <!-- Script AI Analyzer — spans full width below the 3 cards -->
+      <div class="pricing-card" style="grid-column:1/-1;display:flex;align-items:center;gap:40px;flex-wrap:wrap">
+        <div style="flex:1;min-width:200px;display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+          <div>
+            <h3 style="margin-bottom:4px">Script AI Analyzer</h3>
+            <div style="font-size:13px;color:var(--c-muted)">For screenwriters</div>
+          </div>
+          <a href="#" class="btn btn-orange-dk">Analyze Script — $299</a>
+        </div>
+        <div class="pricing-features script-analyzer-features" style="flex:2;display:grid;grid-template-columns:repeat(5,1fr);gap:10px 16px;margin-bottom:0">
+          <div class="pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            AI Detection Analysis
+          </div>
+          <div class="pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Detailed written report
+          </div>
+          <div class="pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Industry Standard Certification
+          </div>
+          <div class="pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Secure Processing
+          </div>
+          <div class="pricing-feature" style="color:var(--c-orange)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            50% off for WGA West members
+          </div>
+        </div>
+        <div style="flex-shrink:0;display:flex;align-items:center">
+          <div class="price" style="margin:0">
+            <span class="price-amount">$299</span>
+            <span class="price-period">/ one-time</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Rights Holders Tab (hidden by default) -->
+    <div id="tab-rights" class="pricing-grid" style="display:none">
+      <div class="pricing-card">
+        <h3>Organization License</h3>
+        <div style="font-size:13px;color:var(--c-muted);margin-top:4px">For guilds &amp; unions</div>
+        <div class="price">
+          <span class="price-amount" style="font-size:1.5rem">Custom</span>
+        </div>
+        <p class="pricing-desc">Tailored pricing based on membership size and specific needs.</p>
+        <div class="pricing-features">
+          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Organization-wide member management</div>
+          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Advisory board seat</div>
+          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Reduced per-member pricing</div>
+          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Dedicated account manager</div>
+        </div>
+        <a href="#" class="btn btn-orange" style="width:100%;justify-content:center">Contact Us</a>
+      </div>
+      <div class="pricing-card popular">
+        <div class="popular-badge">Most Popular</div>
+        <h3>Enterprise</h3>
+        <div style="font-size:13px;color:var(--c-muted);margin-top:4px">For studios &amp; publishers</div>
+        <div class="price">
+          <span class="price-amount" style="font-size:1.5rem">Custom</span>
+        </div>
+        <p class="pricing-desc">Full-service AI content governance for large organizations.</p>
+        <div class="pricing-features">
+          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Custom API integration</div>
+          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Unlimited content registration</div>
+          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Corpus disclosure compliance</div>
+          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Dedicated legal advisory</div>
+          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>SLA with 99.9% uptime</div>
+        </div>
+        <a href="#" class="btn btn-orange" style="width:100%;justify-content:center">Get a Demo</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ CUSTOM SOLUTIONS ═══════════════════════════════════════ -->
+<section class="section-pad" style="background:var(--c-bg-light)">
+  <div class="container">
+    <div style="background:var(--c-navy);border-radius:20px;padding:60px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;position:relative;overflow:hidden">
+      <div style="position:absolute;top:-80px;right:-40px;width:300px;height:300px;background:radial-gradient(circle,rgba(124,99,194,0.4) 0%,rgba(41,0,153,0) 70%);pointer-events:none"></div>
+      <div style="position:relative;z-index:1">
+        <div class="eyebrow" style="margin-bottom:14px">Custom Solutions</div>
+        <h2 style="color:#fff;max-width:480px;margin-bottom:14px">Need a Custom Solution?</h2>
+        <p style="color:rgba(255,255,255,0.7);max-width:520px">For enterprise organizations, studios, and large catalogs — let's build a plan tailored to your needs.</p>
+      </div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;position:relative;z-index:1">
+        <a href="#" class="btn btn-primary">Get a Demo</a>
+        <a href="#" class="btn btn-outline-white">Contact Sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ CTA ════════════════════════════════════════════════ -->
+<section class="section-pad-sm" style="background:#fff;text-align:center">
+  <div class="container">
+    <p style="font-size:16px;color:var(--c-muted)">Questions about pricing? <a href="faq.html" style="color:var(--c-purple);font-weight:700">Read our FAQ</a> or email <a href="mailto:hello@credtent.org" style="color:var(--c-orange);font-weight:700">hello@credtent.org</a></p>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script>
+  function switchTab(btn, tab) {
+    document.querySelectorAll('.pricing-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-creators').style.display = tab === 'creators' ? 'grid' : 'none';
+    document.getElementById('tab-rights').style.display = tab === 'rights' ? 'grid' : 'none';
+  }
+</script>
+<script src="components.js?v=4"></script>
+</body>
+</html>
