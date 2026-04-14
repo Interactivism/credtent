@@ -685,6 +685,7 @@ section { width: 100%; }
   justify-content: center;
   margin-bottom: 28px;
   position: relative;
+  border: 2px solid transparent;
 }
 
 .step-label {
@@ -703,6 +704,23 @@ section { width: 100%; }
   font-size: 14px;
   color: var(--c-body);
   line-height: 1.7;
+}
+
+/* ── Steps animation ─────────────────────────────────────── */
+.steps-grid .step {
+  opacity: 0.2;
+  transition: opacity 0.7s ease;
+}
+.steps-grid .step.step-done {
+  opacity: 1;
+}
+.steps-grid .step.step-active {
+  opacity: 1;
+}
+.steps-grid .step.step-active .step-num {
+  border-color: var(--c-orange);
+  box-shadow: 0 0 0 7px rgba(235,141,30,0.2), 0 0 28px rgba(235,141,30,0.18);
+  transition: box-shadow 0.5s ease, border-color 0.5s ease;
 }
 
 /* ── CTA Banner ───────────────────────────────────────────── */
@@ -1606,6 +1624,7 @@ section { width: 100%; }
   .steps-grid { grid-template-columns: 1fr; gap: 40px; }
   .steps-grid::before { display: none; }
   .step { padding: 0; }
+  .steps-grid .step { opacity: 1; }
   .blog-layout { grid-template-columns: 1fr; }
   .blog-sidebar { position: static; }
   .footer-grid { grid-template-columns: 1fr 1fr; }

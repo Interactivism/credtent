@@ -326,5 +326,33 @@
   })();
 </script>
 <script src="components.js?v=4"></script>
+<script>
+(function () {
+  var steps = Array.from(document.querySelectorAll('.steps-grid .step'));
+  var grid  = document.querySelector('.steps-grid');
+  if (!grid || !steps.length) return;
+
+  function runAnim() {
+    steps.forEach(function (s) { s.classList.remove('step-active', 'step-done'); });
+    var i = 0;
+    (function next() {
+      if (i > 0) steps[i - 1].classList.replace('step-active', 'step-done');
+      if (i < steps.length) {
+        steps[i].classList.add('step-active');
+        i++;
+        setTimeout(next, 900);
+      } else {
+        steps[i - 1].classList.replace('step-active', 'step-done');
+      }
+    })();
+  }
+
+  var obs = new IntersectionObserver(function (entries) {
+    if (entries[0].isIntersecting) { obs.disconnect(); runAnim(); }
+  }, { threshold: 0.4 });
+
+  obs.observe(grid);
+})();
+</script>
 </body>
 </html>
