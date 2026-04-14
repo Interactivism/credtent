@@ -428,13 +428,28 @@ section { width: 100%; }
   max-width: 360px;
 }
 
+.dashboard-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
 .dashboard-card-title {
   font-size: 11px;
   font-family: var(--f-mono);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.5);
-  margin-bottom: 16px;
+}
+.dashboard-earnings-badge {
+  font-size: 11px;
+  font-family: var(--f-mono);
+  font-weight: 600;
+  color: #eb8d1e;
+  background: rgba(235,141,30,0.2);
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
 }
 
 .dashboard-stats {
@@ -1036,6 +1051,7 @@ section { width: 100%; }
   align-items: start;
 }
 .value-item:first-child { border-top: 1px solid var(--c-border); }
+.value-item:last-child { border-bottom: none; }
 
 .value-num {
   font-family: var(--f-mono);
