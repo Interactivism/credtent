@@ -70,7 +70,7 @@
           <img src="credtent-wordmark.svg" alt="Credtent" width="130" height="25">
         </div>
       </div>
-      <p>A neutral, third-party utility uniting creatives and AI for mutual prosperity. Delaware Public Benefit Corporation.</p>
+      <p>Credtent Inc. is a Delaware Public Benefit Corporation — a neutral, third-party utility uniting creatives and AI for mutual prosperity.</p>
       <div class="footer-social">
         <a href="#" title="Bluesky">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
