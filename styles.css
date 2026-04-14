@@ -528,25 +528,11 @@ section { width: 100%; }
 
 .section-header .eyebrow { margin-bottom: 14px; }
 
-.section-header h2 { max-width: 640px; }
-
 .section-header p {
   margin-top: 16px;
   font-size: 16px;
   color: var(--c-body);
-  max-width: 560px;
 }
-
-.section-header.centered {
-  text-align: center;
-}
-
-.section-header.centered .eyebrow {
-  justify-content: center;
-}
-
-.section-header.centered h2,
-.section-header.centered p { margin-left: auto; margin-right: auto; }
 
 /* ── Impact Stats Grid ────────────────────────────────────── */
 .impact-grid {
