@@ -672,8 +672,8 @@ section { width: 100%; }
   content: '';
   position: absolute;
   top: 28px;
-  left: calc(16.67% + 28px);
-  right: calc(16.67% + 28px);
+  left: 28px;
+  right: calc(33.33% - 28px);
   height: 2px;
   background: var(--c-border);
   z-index: 0;
