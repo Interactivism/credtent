@@ -3,36 +3,41 @@
 // <div id="nav-placeholder"></div> / <div id="footer-placeholder"></div>
 
 (function () {
+  // Detect if page is in a subdirectory (e.g. /blog/) and set base path accordingly
+  const _parts = window.location.pathname.split('/').filter(Boolean);
+  const _subDirs = ['blog', 'team'];
+  const base = (_parts.length >= 2 && _subDirs.includes(_parts[_parts.length - 2])) ? '../' : '';
+
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
   const pages = [
-    { href: 'index.html', label: 'Home' },
-    { href: 'services.html', label: 'Services' },
-    { href: 'about.html', label: 'About' },
-    { href: 'faq.html', label: 'FAQ' },
-    { href: 'blog.html', label: 'Blog' },
-    { href: 'pricing.html', label: 'Pricing' },
+    { href: `${base}index.html`, label: 'Home' },
+    { href: `${base}services.html`, label: 'Services' },
+    { href: `${base}about.html`, label: 'About' },
+    { href: `${base}faq.html`, label: 'FAQ' },
+    { href: `${base}blog.html`, label: 'Blog' },
+    { href: `${base}pricing.html`, label: 'Pricing' },
   ];
 
   const navLinks = pages.map(p => {
-    const active = currentPage === p.href ? ' class="active"' : '';
+    const active = p.href.endsWith(currentPage) ? ' class="active"' : '';
     return `<a href="${p.href}"${active}>${p.label}</a>`;
   }).join('');
 
   const mobileLinks = pages.map(p => {
-    const active = currentPage === p.href ? ' class="active"' : '';
+    const active = p.href.endsWith(currentPage) ? ' class="active"' : '';
     return `<a href="${p.href}"${active}>${p.label}</a>`;
   }).join('');
 
   const navHTML = `
 <nav class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
+    <a href="${base}index.html" class="nav-logo">
       <div class="nav-logo-mark">
-        <img src="credtent-logo-mark.svg" alt="" width="32" height="37">
+        <img src="${base}credtent-logo-mark.svg" alt="" width="32" height="37">
       </div>
       <div class="nav-wordmark">
-        <img src="credtent-wordmark.svg" alt="Credtent" width="130" height="25">
+        <img src="${base}credtent-wordmark.svg" alt="Credtent" width="130" height="25">
       </div>
     </a>
     <div class="nav-links">${navLinks}</div>
@@ -64,10 +69,10 @@
     <div class="footer-brand">
       <div class="footer-logo">
         <div class="footer-logo-mark">
-          <img src="credtent-logo-mark.svg" alt="" width="32" height="37">
+          <img src="${base}credtent-logo-mark.svg" alt="" width="32" height="37">
         </div>
         <div class="footer-wordmark">
-          <img src="credtent-wordmark.svg" alt="Credtent" width="130" height="25">
+          <img src="${base}credtent-wordmark.svg" alt="Credtent" width="130" height="25">
         </div>
       </div>
       <p>Credtent Inc. is a Delaware Public Benefit Corporation — a neutral, third-party utility uniting creatives and AI for mutual prosperity.</p>
@@ -92,32 +97,32 @@
     <div class="footer-col">
       <h5>Quick Links</h5>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="${base}index.html">Home</a></li>
+        <li><a href="${base}services.html">Services</a></li>
+        <li><a href="${base}about.html">About</a></li>
+        <li><a href="${base}faq.html">FAQ</a></li>
+        <li><a href="${base}pricing.html">Pricing</a></li>
+        <li><a href="${base}blog.html">Blog</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h5>Services</h5>
       <ul>
-        <li><a href="services.html#licensing">Licensing-as-a-Service</a></li>
-        <li><a href="services.html#research">Research-as-a-Service</a></li>
-        <li><a href="services.html#compliance">Compliance-as-a-Service</a></li>
-        <li><a href="services.html#enterprise">Enterprise Solutions</a></li>
-        <li><a href="badges.html">Creative Origin Badges</a></li>
+        <li><a href="${base}services.html#licensing">Licensing-as-a-Service</a></li>
+        <li><a href="${base}services.html#research">Research-as-a-Service</a></li>
+        <li><a href="${base}services.html#compliance">Compliance-as-a-Service</a></li>
+        <li><a href="${base}services.html#enterprise">Enterprise Solutions</a></li>
+        <li><a href="${base}badges.html">Creative Origin Badges</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h5>Partnerships</h5>
       <ul>
-        <li><a href="lws.html">London Writers' Salon</a></li>
+        <li><a href="${base}lws.html">London Writers' Salon</a></li>
         <li><a href="#">Writers Guild of America</a></li>
         <li><a href="#">Sign Up Free</a></li>
         <li><a href="#">Sign In</a></li>
-        <li><a href="about.html">Contact Us</a></li>
+        <li><a href="${base}about.html">Contact Us</a></li>
       </ul>
     </div>
     <div class="footer-col footer-newsletter">
@@ -136,8 +141,8 @@
   <div class="footer-bottom">
     <span class="footer-copyright">© 2026 Credtent Inc. All rights reserved.</span>
     <div class="footer-legal">
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="${base}privacy-policy.html">Privacy Policy</a>
+      <a href="${base}terms-of-service.html">Terms of Service</a>
     </div>
   </div>
 </footer>`;
