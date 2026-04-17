@@ -477,6 +477,98 @@ section { width: 100%; }
 }
 .dashboard-stat-value.orange { color: var(--c-orange); }
 
+/* ── Who We Serve ─────────────────────────────────────────── */
+.wws-header {
+  max-width: 720px;
+  margin-bottom: 48px;
+}
+.wws-header h2 {
+  font-size: clamp(1.8rem, 3vw, 2.75rem);
+  color: var(--c-heading);
+  margin: 16px 0 16px;
+  line-height: 1.2;
+}
+.wws-header p {
+  font-size: 16px;
+  color: var(--c-body);
+  line-height: 1.7;
+}
+.wws-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.wws-card {
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-card);
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.wws-card h3 {
+  font-size: 1.25rem;
+  color: var(--c-heading);
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+.wws-card > p {
+  font-size: 15px;
+  color: var(--c-body);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.wws-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.wws-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--c-body);
+  line-height: 1.5;
+}
+.wws-features li::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%23290099' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.wws-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--c-purple);
+  text-decoration: none;
+  border-top: 1px solid var(--c-border);
+  padding-top: 20px;
+  margin-top: auto;
+}
+.wws-link:hover { color: var(--c-orange); }
+
+/* ── Photo Banner ──────────────────────────────────────────── */
+.photo-banner {
+  background: var(--c-navy);
+  background-image: linear-gradient(rgba(41,0,153,0.72), rgba(41,0,153,0.72));
+  padding: 80px 40px;
+  text-align: center;
+}
+.photo-banner-inner {
+  max-width: var(--content);
+  margin: 0 auto;
+}
+
 /* ── Trust Strip ──────────────────────────────────────────── */
 .trust-strip {
   background: #f0ecff;
@@ -1800,6 +1892,8 @@ section { width: 100%; }
   .cta-banner { padding: 60px 20px; }
 
   .benefits-grid { grid-template-columns: 1fr; }
+  .wws-grid { grid-template-columns: 1fr; }
+  .wws-card { padding: 24px; }
 }
 
 /* ── Two-column service section layout ───────────────────── */
