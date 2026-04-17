@@ -44,7 +44,7 @@
     </a>
     <div class="nav-links">${navLinks}</div>
     <div class="nav-auth">
-      <a href="#" class="signup">Sign Up Free</a>
+      <a href="#" class="signup">Investor Inquiries</a>
     </div>
     <button class="nav-hamburger" id="nav-hamburger-btn" aria-label="Open menu" aria-expanded="false">
       <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,7 +59,7 @@
   <div class="nav-mobile-links">${mobileLinks}</div>
   <div class="nav-mobile-divider"></div>
   <div class="nav-mobile-auth">
-    <a href="#" class="signup">Sign Up Free</a>
+    <a href="#" class="signup">Investor Inquiries</a>
   </div>
 </div>`;
 
