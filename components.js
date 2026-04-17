@@ -94,48 +94,36 @@
         </a>
       </div>
     </div>
-    <div class="footer-col">
+    <div class="footer-col footer-quicklinks">
       <h5>Quick Links</h5>
-      <ul>
-        <li><a href="${base}index.html">Home</a></li>
-        <li><a href="${base}services.html">Services</a></li>
-        <li><a href="${base}about.html">About</a></li>
-        <li><a href="${base}faq.html">FAQ</a></li>
-        <li><a href="${base}pricing.html">Pricing</a></li>
-        <li><a href="${base}blog.html">Blog</a></li>
-      </ul>
+      <div class="footer-quicklinks-grid">
+        <ul>
+          <li><a href="${base}index.html">Home</a></li>
+          <li><a href="#">AI Companies</a></li>
+          <li><a href="#">Content Owners</a></li>
+        </ul>
+        <ul>
+          <li><a href="${base}about.html">About</a></li>
+          <li><a href="${base}faq.html">FAQ</a></li>
+          <li><a href="${base}pricing.html">Pricing</a></li>
+        </ul>
+      </div>
     </div>
     <div class="footer-col">
       <h5>Services</h5>
       <ul>
         <li><a href="${base}services.html#licensing">Licensing-as-a-Service</a></li>
-        <li><a href="${base}services.html#research">Research-as-a-Service</a></li>
         <li><a href="${base}services.html#compliance">Compliance-as-a-Service</a></li>
         <li><a href="${base}services.html#enterprise">Enterprise Solutions</a></li>
-        <li><a href="${base}badges.html">Creative Origin Badges</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h5>Partnerships</h5>
+      <h5>Talk to Us</h5>
       <ul>
-        <li><a href="${base}lws.html">London Writers' Salon</a></li>
-        <li><a href="#">Writers Guild of America</a></li>
-        <li><a href="#">Sign Up Free</a></li>
-        <li><a href="#">Sign In</a></li>
-        <li><a href="${base}about.html">Contact Us</a></li>
+        <li><a href="#">Content Partners</a></li>
+        <li><a href="#">AI Companies</a></li>
+        <li><a href="#">Investors</a></li>
       </ul>
-    </div>
-    <div class="footer-col footer-newsletter">
-      <h5>Stay Connected</h5>
-      <p>Get insights on creative protection and licensing.</p>
-      <form class="footer-newsletter-form" onsubmit="return false">
-        <input type="email" placeholder="Your email address" />
-        <button type="submit">→</button>
-      </form>
-      <div class="footer-cert" style="margin-top:24px">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
-        B-Corp Certified
-      </div>
     </div>
   </div>
   <div class="footer-bottom">
