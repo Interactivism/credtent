@@ -382,7 +382,7 @@ section { width: 100%; }
 
 .hero-content {
   flex: 0 0 auto;
-  width: clamp(340px, 55%, 620px);
+  width: clamp(340px, 60%, 720px);
   display: flex;
   flex-direction: column;
   gap: 20px;
