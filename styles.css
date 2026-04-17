@@ -629,34 +629,16 @@ section { width: 100%; }
   background: linear-gradient(135deg, rgba(41,0,153,0.15) 0%, rgba(235,141,30,0.1) 100%);
   border-radius: var(--r-card);
 }
-.creator-split-card {
-  background: #fff;
-  border: 1px solid var(--c-border);
-  border-radius: var(--r-card);
-  padding: 36px;
+.creator-split-content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
-.creator-split-card p {
+.creator-split-content p {
   font-size: 15px;
   line-height: 1.7;
   color: var(--c-body);
   margin: 0;
-}
-.btn-outline-purple {
-  border: 2px solid var(--c-purple);
-  color: var(--c-purple);
-  background: transparent;
-  padding: 10px 24px;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 14px;
-  text-decoration: none;
-  transition: background 0.15s, color 0.15s;
-}
-.btn-outline-purple:hover {
-  background: var(--c-purple);
-  color: #fff;
 }
 
 /* ── Talk to Credtent CTA ──────────────────────────────────── */
