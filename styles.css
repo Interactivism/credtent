@@ -557,6 +557,47 @@ section { width: 100%; }
 }
 .wws-link:hover { color: var(--c-orange); }
 
+/* ── Market Section ───────────────────────────────────────── */
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 8px;
+}
+.market-card {
+  background: #fff;
+  border-radius: var(--r-card);
+  padding: 32px;
+  border-top: 3px solid transparent;
+}
+.market-card--purple { border-top-color: var(--c-purple); }
+.market-card--orange { border-top-color: var(--c-orange); }
+.market-card--navy   { border-top-color: var(--c-navy); }
+.market-card-stat {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: var(--c-purple);
+  font-family: var(--f-display);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.market-card-label {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+.market-card p {
+  font-size: 14px;
+  color: var(--c-body);
+  line-height: 1.7;
+  margin: 0;
+}
+
 /* ── Photo Banner ──────────────────────────────────────────── */
 .photo-banner {
   background: var(--c-navy);
@@ -1894,6 +1935,7 @@ section { width: 100%; }
   .benefits-grid { grid-template-columns: 1fr; }
   .wws-grid { grid-template-columns: 1fr; }
   .wws-card { padding: 24px; }
+  .market-grid { grid-template-columns: 1fr; }
 }
 
 /* ── Two-column service section layout ───────────────────── */
