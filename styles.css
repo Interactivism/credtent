@@ -610,6 +610,64 @@ section { width: 100%; }
   margin: 0 auto;
 }
 
+/* ── Creator Split ────────────────────────────────────────── */
+.creator-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+  margin-top: 8px;
+}
+.creator-split-image {
+  border-radius: var(--r-card);
+  overflow: hidden;
+}
+.creator-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  background: linear-gradient(135deg, rgba(41,0,153,0.15) 0%, rgba(235,141,30,0.1) 100%);
+  border-radius: var(--r-card);
+}
+.creator-split-card {
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-card);
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+}
+.creator-split-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--c-body);
+  margin: 0;
+}
+.btn-outline-purple {
+  border: 2px solid var(--c-purple);
+  color: var(--c-purple);
+  background: transparent;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.btn-outline-purple:hover {
+  background: var(--c-purple);
+  color: #fff;
+}
+
+/* ── Talk to Credtent CTA ──────────────────────────────────── */
+.talk-cta {
+  background: var(--c-navy);
+  border-radius: 20px;
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
 /* ── Trust Strip ──────────────────────────────────────────── */
 .trust-strip {
   background: #f0ecff;
@@ -1936,6 +1994,8 @@ section { width: 100%; }
   .wws-grid { grid-template-columns: 1fr; }
   .wws-card { padding: 24px; }
   .market-grid { grid-template-columns: 1fr; }
+  .creator-split { grid-template-columns: 1fr; }
+  .talk-cta { padding: 40px 28px; }
 }
 
 /* ── Two-column service section layout ───────────────────── */
