@@ -565,7 +565,7 @@ section { width: 100%; }
   margin-top: 8px;
 }
 .market-card {
-  background: #fff;
+  background: var(--c-bg-light);
   border-radius: var(--r-card);
   padding: 32px;
   border-top: 3px solid transparent;
