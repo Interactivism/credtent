@@ -44,7 +44,6 @@
     </a>
     <div class="nav-links">${navLinks}</div>
     <div class="nav-auth">
-      <a href="#" class="signin">Sign In</a>
       <a href="#" class="signup">Sign Up Free</a>
     </div>
     <button class="nav-hamburger" id="nav-hamburger-btn" aria-label="Open menu" aria-expanded="false">
@@ -60,7 +59,6 @@
   <div class="nav-mobile-links">${mobileLinks}</div>
   <div class="nav-mobile-divider"></div>
   <div class="nav-mobile-auth">
-    <a href="#" class="signin">Sign In</a>
     <a href="#" class="signup">Sign Up Free</a>
   </div>
 </div>`;
