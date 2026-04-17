@@ -373,16 +373,16 @@ section { width: 100%; }
 .hero-inner {
   position: relative;
   z-index: 1;
-  max-width: var(--content);
+  max-width: var(--content-lg);
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 80px;
+  gap: 60px;
 }
 
 .hero-content {
   flex: 0 0 auto;
-  width: clamp(340px, 60%, 720px);
+  width: clamp(340px, 52%, 660px);
   display: flex;
   flex-direction: column;
   gap: 20px;
