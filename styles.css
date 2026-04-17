@@ -170,6 +170,12 @@ section { width: 100%; }
   border-color: rgba(255,255,255,0.7);
 }
 .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+.btn-outline-dark {
+  background: transparent;
+  color: var(--c-heading);
+  border-color: var(--c-heading);
+}
+.btn-outline-dark:hover { background: var(--c-heading); color: #fff; }
 
 .btn-outline-purple {
   background: transparent;
