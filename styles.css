@@ -1394,7 +1394,6 @@ section { width: 100%; }
   z-index: 1;
   max-width: var(--content-lg);
   margin: 0 auto;
-  width: clamp(340px, 62%, 780px);
 }
 .page-hero .eyebrow { margin-bottom: 16px; }
 .page-hero h1 {
