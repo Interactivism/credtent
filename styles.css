@@ -422,10 +422,10 @@ section { width: 100%; }
   border: 1px solid rgba(255,255,255,0.12);
   backdrop-filter: blur(10px);
   border-radius: 16px;
-  padding: 24px;
+  padding: 28px;
   color: #fff;
   width: 100%;
-  max-width: 360px;
+  max-width: 420px;
 }
 
 .dashboard-card-header {
@@ -464,17 +464,17 @@ section { width: 100%; }
   padding: 16px;
 }
 .dashboard-stat-label {
-  font-size: 11px;
-  color: rgba(255,255,255,0.45);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 6px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 6px;
+  line-height: 1.4;
 }
 .dashboard-stat-value {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   color: #fff;
-  font-family: var(--f-mono);
+  font-family: var(--f-display);
+  line-height: 1.1;
 }
 .dashboard-stat-value.orange { color: var(--c-orange); }
 
