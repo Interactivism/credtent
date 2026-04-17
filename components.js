@@ -13,6 +13,7 @@
   const pages = [
     { href: `${base}index.html`, label: 'Home' },
     { href: `${base}for-ai-companies.html`, label: 'AI Companies' },
+    { href: `${base}for-content-owners.html`, label: 'Content Owners' },
     { href: `${base}services.html`, label: 'Services' },
     { href: `${base}about.html`, label: 'About' },
     { href: `${base}faq.html`, label: 'FAQ' },

@@ -731,6 +731,49 @@ section { width: 100%; }
   margin: 0;
 }
 
+/* ── For Content Owners Page ──────────────────────────────── */
+.fco-economics {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.fco-economics-stat {
+  background: var(--c-navy);
+  border-radius: var(--r-card);
+  padding: 36px 40px;
+  text-align: center;
+  min-width: 200px;
+}
+.fco-stat-num {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--c-orange);
+  font-family: var(--f-display);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.fco-stat-label {
+  font-size: 12px;
+  font-family: var(--f-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.5;
+}
+.fco-economics-body h2 {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  color: var(--c-heading);
+  margin: 12px 0 16px;
+  line-height: 1.25;
+}
+.fco-economics-body p {
+  font-size: 15px;
+  color: var(--c-body);
+  line-height: 1.7;
+  margin: 0;
+}
+
 /* ── Market Section ───────────────────────────────────────── */
 .market-grid {
   display: grid;
@@ -2162,6 +2205,7 @@ section { width: 100%; }
   .aic-steps-grid { grid-template-columns: 1fr 1fr; }
   .aic-steps-grid::before { display: none; }
   .aic-retro { padding: 32px; }
+  .fco-economics { grid-template-columns: 1fr; gap: 32px; }
 }
 
 /* ── Two-column service section layout ───────────────────── */
