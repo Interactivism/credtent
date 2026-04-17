@@ -563,6 +563,174 @@ section { width: 100%; }
 }
 .wws-link:hover { color: var(--c-orange); }
 
+/* ── For AI Companies Page ────────────────────────────────── */
+.aic-covered-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.aic-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.aic-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--c-body);
+  line-height: 1.5;
+}
+.aic-checklist li::before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url("shield-check.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.aic-trust-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.aic-trust-item {
+  background: var(--c-bg-light);
+  border-radius: var(--r-card);
+  padding: 18px 22px;
+}
+.aic-trust-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--c-heading);
+  line-height: 1.4;
+}
+.aic-corpus-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.aic-stat-card {
+  background: #fff;
+  border-radius: var(--r-card);
+  padding: 28px 24px;
+  border-top: 3px solid var(--c-purple);
+}
+.aic-stat-num {
+  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+  font-weight: 800;
+  color: var(--c-purple);
+  font-family: var(--f-display);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.aic-stat-label {
+  font-size: 13px;
+  color: var(--c-muted);
+  line-height: 1.4;
+}
+.aic-verticals {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+}
+.aic-dot { color: var(--c-orange); }
+.aic-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.aic-feature-card {
+  background: var(--c-bg-light);
+  border-radius: var(--r-card);
+  padding: 28px;
+}
+.aic-feature-card h4 {
+  font-size: 1rem;
+  color: var(--c-heading);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.aic-feature-card p {
+  font-size: 14px;
+  color: var(--c-body);
+  line-height: 1.7;
+  margin: 0;
+}
+.aic-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  position: relative;
+}
+.aic-steps-grid::before {
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: 40px;
+  right: 40px;
+  height: 1px;
+  background: var(--c-border);
+}
+.aic-step {
+  position: relative;
+}
+.aic-step .step-num {
+  position: relative;
+  z-index: 1;
+  background: var(--c-bg-light);
+}
+.aic-step h3 {
+  font-size: 1rem;
+  color: var(--c-heading);
+  margin: 16px 0 8px;
+}
+.aic-step p {
+  font-size: 14px;
+  color: var(--c-body);
+  line-height: 1.65;
+  margin: 0;
+}
+.aic-retro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  flex-wrap: wrap;
+  background: var(--c-bg-light);
+  border-radius: 20px;
+  padding: 48px;
+}
+.aic-retro h2 {
+  font-size: clamp(1.4rem, 2.5vw, 1.875rem);
+  color: var(--c-heading);
+  margin: 12px 0 12px;
+}
+.aic-retro p {
+  font-size: 15px;
+  color: var(--c-body);
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 0;
+}
+
 /* ── Market Section ───────────────────────────────────────── */
 .market-grid {
   display: grid;
@@ -1988,6 +2156,12 @@ section { width: 100%; }
   .market-grid { grid-template-columns: 1fr; }
   .creator-split { grid-template-columns: 1fr; }
   .talk-cta { padding: 40px 28px; }
+  .aic-covered-grid { grid-template-columns: 1fr; gap: 40px; }
+  .aic-corpus-grid { grid-template-columns: 1fr 1fr; }
+  .aic-features-grid { grid-template-columns: 1fr; }
+  .aic-steps-grid { grid-template-columns: 1fr 1fr; }
+  .aic-steps-grid::before { display: none; }
+  .aic-retro { padding: 32px; }
 }
 
 /* ── Two-column service section layout ───────────────────── */
