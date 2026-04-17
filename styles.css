@@ -480,18 +480,27 @@ section { width: 100%; }
 /* ── Trust Strip ──────────────────────────────────────────── */
 .trust-strip {
   background: #f0ecff;
-  padding: 21px 40px;
+  padding: 14px 0;
   border-top: 1px solid rgba(41,0,153,0.1);
   border-bottom: 1px solid rgba(41,0,153,0.1);
+  overflow: hidden;
+  width: 100%;
 }
 
 .trust-inner {
-  max-width: var(--content);
-  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0 32px;
+  width: max-content;
   align-items: center;
+  animation: trust-ticker 36s linear infinite;
+}
+
+.trust-inner:hover {
+  animation-play-state: paused;
+}
+
+@keyframes trust-ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .trust-item {
@@ -502,6 +511,7 @@ section { width: 100%; }
   font-weight: 600;
   color: var(--c-purple);
   white-space: nowrap;
+  padding: 0 32px;
 }
 
 .trust-item svg {
@@ -517,7 +527,8 @@ section { width: 100%; }
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--c-body);
-  margin-left: auto;
+  white-space: nowrap;
+  padding: 0 32px;
 }
 
 /* ── Section Header ───────────────────────────────────────── */
@@ -1787,9 +1798,7 @@ section { width: 100%; }
   .badges-grid { grid-template-columns: 1fr; }
   .value-item { grid-template-columns: 48px 1fr; }
   .cta-banner { padding: 60px 20px; }
-  .trust-strip { padding: 45px 40px 33px; }
-  .trust-inner { flex-direction: column; align-items: flex-start; gap: 40px; }
-  .trust-pbc { margin-left: 0; }
+
   .benefits-grid { grid-template-columns: 1fr; }
 }
 
