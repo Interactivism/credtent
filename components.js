@@ -123,8 +123,8 @@
     <div class="footer-col">
       <h5>Talk to Us</h5>
       <ul>
-        <li><a href="#">Content Partners</a></li>
-        <li><a href="#">AI Companies</a></li>
+        <li><a href="${base}for-content-owners.html#talk-content">Content Partners</a></li>
+        <li><a href="${base}for-ai-companies.html#talk-licensing">AI Companies</a></li>
         <li><a href="https://tally.so/r/2ExeBp" target="_blank" rel="noopener">Investors</a></li>
       </ul>
     </div>
