@@ -109,6 +109,7 @@ p { line-height: 1.5; margin-bottom: 0.5em; }
   background: var(--c-orange);
   flex-shrink: 0;
 }
+.eyebrow--no-dash::before { display: none; }
 
 .accent { color: var(--c-orange); }
 .accent-purple { color: var(--c-purple); }
