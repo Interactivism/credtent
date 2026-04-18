@@ -1530,7 +1530,8 @@ section { width: 100%; }
 }
 
 .advisor-card {
-  background: var(--c-bg-light);
+  background: #fff;
+  border: 1px solid var(--c-border);
   border-radius: 10px;
   padding: 16px 18px;
 }
