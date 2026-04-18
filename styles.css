@@ -1792,6 +1792,19 @@ section { width: 100%; }
   margin-top: 2px;
 }
 
+/* ── Pricing Page Tab Bar ─────────────────────────────────── */
+.pricing-page-tabs {
+  background: #fff;
+  border-bottom: 1px solid var(--c-border);
+  padding: 20px 0;
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 90;
+}
+
+.pricing-panel { display: none; }
+.pricing-panel.active { display: block; }
+
 /* ── Pricing Criteria Cards (Enterprise section) ─────────── */
 .pricing-criteria-grid {
   display: grid;
