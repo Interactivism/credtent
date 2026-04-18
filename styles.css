@@ -623,8 +623,7 @@ section { width: 100%; }
 .aic-stat-card {
   background: #fff;
   border-radius: var(--r-card);
-  padding: 28px 24px;
-  border-top: 3px solid var(--c-purple);
+  padding: 28px;
 }
 .aic-stat-num {
   font-size: clamp(1.75rem, 2.5vw, 2.25rem);
