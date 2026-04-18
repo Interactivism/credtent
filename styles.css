@@ -1792,6 +1792,53 @@ section { width: 100%; }
   margin-top: 2px;
 }
 
+/* ── Pricing Criteria Cards (Enterprise section) ─────────── */
+.pricing-criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 40px 0 40px;
+}
+
+.pricing-criteria-card {
+  background: var(--c-bg-light);
+  border-radius: var(--r-card);
+  padding: 28px 24px;
+}
+
+.pricing-criteria-card h4 {
+  margin-bottom: 10px;
+  color: var(--c-heading);
+}
+
+.pricing-criteria-card p {
+  font-size: 14px;
+  color: var(--c-muted);
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+.pricing-section-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.pricing-section-header .section-header {
+  text-align: left;
+  max-width: 640px;
+}
+
+.pricing-section-header .section-header::after { display: none; }
+
+@media (max-width: 860px) {
+  .pricing-criteria-grid { grid-template-columns: 1fr; }
+  .pricing-section-header { flex-direction: column; }
+}
+
 /* ── Blog ─────────────────────────────────────────────────── */
 .blog-layout {
   display: grid;
