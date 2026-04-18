@@ -326,6 +326,27 @@
       }).observe(sentinel);
     }
 
+    // On mobile: track nav visibility and keep tab bar directly below it
+    (function () {
+      var nav = document.querySelector('.nav');
+      if (!nav || !tabBar) return;
+
+      function syncTop() {
+        if (window.innerWidth > 640) {
+          tabBar.style.top = '';   // let CSS handle desktop
+          return;
+        }
+        // Nav slides out via transform (nav--hidden); offsetHeight stays constant.
+        // When hidden the nav's visible bottom is at 0; when shown it's at offsetHeight.
+        var navBottom = nav.classList.contains('nav--hidden') ? 0 : nav.offsetHeight;
+        tabBar.style.top = navBottom + 'px';
+      }
+
+      new MutationObserver(syncTop).observe(nav, { attributes: true, attributeFilter: ['class'] });
+      window.addEventListener('resize', syncTop, { passive: true });
+      syncTop();
+    }());
+
     var tabs   = document.querySelectorAll('.pricing-page-tabs .pricing-tab');
     var panels = document.querySelectorAll('.pricing-panel');
 
