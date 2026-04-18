@@ -115,9 +115,9 @@
     <div class="footer-col">
       <h5>Services</h5>
       <ul>
-        <li><a href="${base}services.html#licensing">Licensing-as-a-Service</a></li>
-        <li><a href="${base}services.html#compliance">Compliance-as-a-Service</a></li>
-        <li><a href="${base}services.html#enterprise">Enterprise Solutions</a></li>
+        <li><a href="${base}for-ai-companies.html">Licensing-as-a-Service</a></li>
+        <li><a href="${base}for-ai-companies.html">Compliance-as-a-Service</a></li>
+        <li><a href="${base}for-content-owners.html">Enterprise Solutions</a></li>
       </ul>
     </div>
     <div class="footer-col">
