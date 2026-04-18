@@ -1797,10 +1797,17 @@ section { width: 100%; }
   background: #fff;
   border-bottom: 1px solid transparent;
   transition: border-color 0.15s;
+  display: flex;
+  align-items: center;
   padding: 12px 0;
   position: sticky;
   top: var(--nav-h);
   z-index: 90;
+}
+
+/* Override the 48px bottom margin .pricing-tabs normally carries */
+.pricing-page-tabs .pricing-tabs {
+  margin: 0;
 }
 
 .pricing-page-tabs.is-stuck {
