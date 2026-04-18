@@ -1807,9 +1807,13 @@ section { width: 100%; }
   border-bottom-color: var(--c-border);
 }
 
-/* On mobile the tab bar top is managed by JS to track nav visibility */
+/* On mobile the tab bar top is managed by JS to track nav visibility.
+   Transition matches the nav's transform: 0.25s ease so they move together. */
 @media (max-width: 640px) {
-  .pricing-page-tabs { top: 0; }
+  .pricing-page-tabs {
+    top: 0;
+    transition: border-color 0.15s, top 0.25s ease;
+  }
 }
 
 /* Reduce top padding of the first section in each panel by 50% */
