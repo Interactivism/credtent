@@ -1807,7 +1807,7 @@ section { width: 100%; }
 
 /* Override the 48px bottom margin .pricing-tabs normally carries */
 .pricing-page-tabs .pricing-tabs {
-  margin: 0;
+  margin: 0 auto;
 }
 
 .pricing-page-tabs.is-stuck {
