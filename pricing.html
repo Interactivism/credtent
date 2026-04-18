@@ -358,7 +358,15 @@
         panels.forEach(function (p) { p.classList.remove('active'); });
 
         tab.classList.add('active');
-        document.getElementById(target).classList.add('active');
+        var panel = document.getElementById(target);
+        panel.classList.add('active');
+
+        // When stuck, scroll so the panel top sits flush below the tab bar
+        if (tabBar && tabBar.classList.contains('is-stuck')) {
+          var tabBarBottom = tabBar.getBoundingClientRect().bottom;
+          var panelTop     = panel.getBoundingClientRect().top;
+          window.scrollBy({ top: panelTop - tabBarBottom, behavior: 'instant' });
+        }
       });
     });
   }());
