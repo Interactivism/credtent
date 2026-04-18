@@ -683,19 +683,23 @@ section { width: 100%; }
 .aic-steps-grid::before {
   content: '';
   position: absolute;
-  top: 22px;
+  top: 52px;
   left: 40px;
   right: 40px;
   height: 1px;
   background: var(--c-border);
 }
 .aic-step {
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-card);
+  padding: 24px;
   position: relative;
 }
 .aic-step .step-num {
   position: relative;
   z-index: 1;
-  background: var(--c-bg-light);
+  background: var(--c-navy);
 }
 .aic-step h3 {
   font-size: 1rem;
