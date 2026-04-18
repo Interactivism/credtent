@@ -353,24 +353,50 @@
     var tabs   = document.querySelectorAll('.pricing-page-tabs .pricing-tab');
     var panels = document.querySelectorAll('.pricing-panel');
 
+    // Activate a tab by its panel key (e.g. 'ai-companies')
+    function activateTab(key) {
+      var matched = false;
+      tabs.forEach(function (t) {
+        t.classList.toggle('active', t.dataset.panel === key);
+        if (t.dataset.panel === key) matched = true;
+      });
+      // Fall back to first tab if key is unrecognised
+      if (!matched) {
+        tabs[0] && tabs[0].classList.add('active');
+        key = tabs[0] ? tabs[0].dataset.panel : key;
+      }
+      panels.forEach(function (p) {
+        p.classList.toggle('active', p.id === 'pricing-panel-' + key);
+      });
+    }
+
+    // Read hash on load (strip leading #, default to first tab)
+    var defaultKey = tabs[0] ? tabs[0].dataset.panel : 'ai-companies';
+    var initialKey = location.hash ? location.hash.slice(1) : defaultKey;
+    activateTab(initialKey);
+
+    // Update URL hash and activate tab on click
     tabs.forEach(function (tab) {
       tab.addEventListener('click', function () {
-        var target = 'pricing-panel-' + tab.dataset.panel;
+        var key = tab.dataset.panel;
 
-        tabs.forEach(function (t) { t.classList.remove('active'); });
-        panels.forEach(function (p) { p.classList.remove('active'); });
-
-        tab.classList.add('active');
-        var panel = document.getElementById(target);
-        panel.classList.add('active');
+        // Update hash without triggering a page jump (pushState keeps history)
+        history.pushState(null, '', '#' + key);
+        activateTab(key);
 
         // When stuck, scroll so the panel top sits flush below the tab bar
-        if (tabBar && tabBar.classList.contains('is-stuck')) {
+        var panel = document.getElementById('pricing-panel-' + key);
+        if (tabBar && tabBar.classList.contains('is-stuck') && panel) {
           var tabBarBottom = tabBar.getBoundingClientRect().bottom;
           var panelTop     = panel.getBoundingClientRect().top;
           window.scrollBy({ top: panelTop - tabBarBottom, behavior: 'instant' });
         }
       });
+    });
+
+    // Handle browser back / forward
+    window.addEventListener('popstate', function () {
+      activateTab(location.hash ? location.hash.slice(1) : defaultKey);
     });
   }());
 </script>
