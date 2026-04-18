@@ -20,6 +20,9 @@
   </div>
 </section>
 
+<!-- sentinel: becomes hidden when tab bar sticks, triggering the border -->
+<div id="pricing-tabs-sentinel" style="height:1px;margin-top:-1px"></div>
+
 <!-- ══ TAB BAR ════════════════════════════════════════════════ -->
 <div class="pricing-page-tabs">
   <div class="container" style="display:flex;justify-content:center">
@@ -314,6 +317,15 @@
 
 <script>
   (function () {
+    // Show border only when tab bar is stuck
+    var sentinel = document.getElementById('pricing-tabs-sentinel');
+    var tabBar   = document.querySelector('.pricing-page-tabs');
+    if (sentinel && tabBar) {
+      new IntersectionObserver(function (entries) {
+        tabBar.classList.toggle('is-stuck', !entries[0].isIntersecting);
+      }).observe(sentinel);
+    }
+
     var tabs   = document.querySelectorAll('.pricing-page-tabs .pricing-tab');
     var panels = document.querySelectorAll('.pricing-panel');
 

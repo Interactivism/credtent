@@ -1795,11 +1795,21 @@ section { width: 100%; }
 /* ── Pricing Page Tab Bar ─────────────────────────────────── */
 .pricing-page-tabs {
   background: #fff;
-  border-bottom: 1px solid var(--c-border);
-  padding: 20px 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+  padding: 12px 0;
   position: sticky;
   top: var(--nav-h);
   z-index: 90;
+}
+
+.pricing-page-tabs.is-stuck {
+  border-bottom-color: var(--c-border);
+}
+
+/* On mobile the global nav hides on scroll, so stick tabs to top of viewport */
+@media (max-width: 640px) {
+  .pricing-page-tabs { top: 0; }
 }
 
 .pricing-panel { display: none; }
