@@ -732,6 +732,25 @@ section { width: 100%; }
   margin: 0;
 }
 
+/* ── Content Owners (co-) layout classes ─────────────────── */
+.co-covered-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.co-checklist { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+.co-checklist li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--c-body); line-height: 1.5; }
+.co-checklist li::before { content: ''; display: block; width: 18px; height: 18px; background-image: url("shield-check.svg"); background-repeat: no-repeat; background-size: contain; flex-shrink: 0; margin-top: 1px; }
+.co-trust-items { display: flex; flex-direction: column; gap: 16px; }
+.co-trust-item { background: var(--c-bg-light); border-radius: var(--r-card); padding: 18px 22px; }
+.co-trust-label { font-size: 14px; font-weight: 600; color: var(--c-heading); line-height: 1.4; }
+.co-features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.co-feature-card { background: var(--c-bg-light); border-radius: var(--r-card); padding: 28px; }
+.co-feature-card h4 { font-size: 1rem; color: var(--c-heading); font-weight: 700; margin-bottom: 10px; }
+.co-feature-card p { font-size: 14px; color: var(--c-body); line-height: 1.7; margin: 0; }
+.co-steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; position: relative; }
+.co-steps-grid::before { content: ''; position: absolute; top: 52px; left: 40px; right: 40px; height: 1px; background: var(--c-border); }
+.co-step { background: #fff; border: 1px solid var(--c-border); border-radius: var(--r-card); padding: 24px; position: relative; }
+.co-step .step-num { position: relative; z-index: 1; background: #fff; }
+.co-step h3 { font-size: 1rem; color: var(--c-heading); margin: 16px 0 8px; }
+.co-step p { font-size: 14px; color: var(--c-body); line-height: 1.65; margin: 0; }
+
 /* ── For Content Owners Page ──────────────────────────────── */
 .fco-economics {
   display: grid;
@@ -2237,6 +2256,10 @@ section { width: 100%; }
   .aic-steps-grid { grid-template-columns: 1fr 1fr; }
   .aic-steps-grid::before { display: none; }
   .aic-retro { padding: 32px; }
+  .co-covered-grid { grid-template-columns: 1fr; gap: 40px; }
+  .co-features-grid { grid-template-columns: 1fr; }
+  .co-steps-grid { grid-template-columns: 1fr 1fr; }
+  .co-steps-grid::before { display: none; }
   .fco-economics { grid-template-columns: 1fr; gap: 32px; }
 }
 
