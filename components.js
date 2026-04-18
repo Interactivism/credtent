@@ -99,8 +99,8 @@
       <div class="footer-quicklinks-grid">
         <ul>
           <li><a href="${base}index.html">Home</a></li>
-          <li><a href="#">AI Companies</a></li>
-          <li><a href="#">Content Owners</a></li>
+          <li><a href="${base}for-ai-companies.html">AI Companies</a></li>
+          <li><a href="${base}for-content-owners.html">Content Owners</a></li>
         </ul>
         <ul>
           <li><a href="${base}about.html">About</a></li>
