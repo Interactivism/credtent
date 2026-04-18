@@ -804,12 +804,8 @@ section { width: 100%; }
 .market-card {
   background: var(--c-bg-light);
   border-radius: var(--r-card);
-  padding: 32px;
-  border-top: 3px solid transparent;
+  padding: 28px;
 }
-.market-card--purple { border-top-color: var(--c-purple); }
-.market-card--orange { border-top-color: var(--c-orange); }
-.market-card--navy   { border-top-color: var(--c-navy); }
 .market-card-stat {
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 800;
