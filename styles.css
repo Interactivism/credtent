@@ -857,7 +857,6 @@ section { width: 100%; }
 }
 .creator-split-image {
   border-radius: var(--r-card);
-  overflow: hidden;
 }
 .creator-photo-placeholder {
   width: 100%;
@@ -865,6 +864,7 @@ section { width: 100%; }
   min-height: 280px;
   background: url('man-with-camera-05RXMOeiOVA-unsplash.jpg') center/cover no-repeat;
   border-radius: var(--r-card);
+  overflow: hidden;
 }
 .creator-split-content {
   display: flex;
