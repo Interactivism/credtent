@@ -2356,6 +2356,12 @@ section { width: 100%; }
     padding-right: 24px;          /* peek hint — last tab doesn't butt against edge */
   }
   .faq-tabs::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+  /* overflow-x:auto forces overflow-y:auto, which clips the active tab's
+     margin-bottom:-2px indicator. Replace with an inset box-shadow that
+     draws the orange line inside the element so no overflow is needed. */
+  .faq-tab        { margin-bottom: 0; border-bottom-color: transparent !important; }
+  .faq-tab.active { box-shadow: inset 0 -2px 0 var(--c-orange); }
 }
 
 /* ── Two-column service section layout ───────────────────── */
