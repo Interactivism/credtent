@@ -2347,6 +2347,15 @@ section { width: 100%; }
   .co-steps-grid { grid-template-columns: 1fr 1fr; }
   .co-steps-grid::before { display: none; }
   .fco-economics { grid-template-columns: 1fr; gap: 32px; }
+
+  /* FAQ tabs: scroll horizontally instead of overflowing the viewport */
+  .faq-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;        /* Firefox */
+    padding-right: 24px;          /* peek hint — last tab doesn't butt against edge */
+  }
+  .faq-tabs::-webkit-scrollbar { display: none; } /* Chrome/Safari */
 }
 
 /* ── Two-column service section layout ───────────────────── */
