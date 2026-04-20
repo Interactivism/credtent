@@ -241,6 +241,57 @@
       }, { passive: true });
     }());
 
+    // ── Cookie consent & Google Analytics ───────────────────────
+    (function () {
+      var GA_ID       = 'G-3BJJV0MSLW';
+      var CONSENT_KEY = 'credtent_cookie_consent';
+
+      function loadGA() {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+      }
+
+      function showBanner() {
+        var el = document.createElement('div');
+        el.id = 'cookie-banner';
+        el.innerHTML =
+          '<div class="cookie-banner-inner">' +
+            '<p class="cookie-banner-text">We use cookies to understand how visitors use our site. ' +
+              '<a href="' + base + 'privacy-policy.html">Privacy Policy</a>' +
+            '</p>' +
+            '<div class="cookie-banner-actions">' +
+              '<button id="cookie-accept" class="btn btn-primary">Accept</button>' +
+              '<button id="cookie-decline" class="btn btn-outline-white">Decline</button>' +
+            '</div>' +
+          '</div>';
+        document.body.appendChild(el);
+
+        document.getElementById('cookie-accept').addEventListener('click', function () {
+          localStorage.setItem(CONSENT_KEY, 'accepted');
+          el.remove();
+          loadGA();
+        });
+        document.getElementById('cookie-decline').addEventListener('click', function () {
+          localStorage.setItem(CONSENT_KEY, 'declined');
+          el.remove();
+        });
+      }
+
+      var consent = localStorage.getItem(CONSENT_KEY);
+      if (consent === 'accepted') {
+        loadGA();
+      } else if (!consent) {
+        showBanner();
+      }
+    }());
+
     // Mobile hamburger toggle
     const hamburgerBtn = document.getElementById('nav-hamburger-btn');
     const mobileMenu   = document.getElementById('nav-mobile-menu');
